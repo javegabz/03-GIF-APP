@@ -2,9 +2,17 @@
     <h3>GifApp</h3>
     <hr>
     <div class="list-group list-reset">
-        <button class="list-group-item list-group-item-action">
+        <ul class="mt-2 list-group">
+            <li *ngFor="let tag of tags"
+                class="list-group-item">
+                {{ tag | titlecase }}
+            </li>
+        </ul>
+        <!--
+        <button class="list-group-item list-group-item-action" (click)="showTag()">
             Valorant
         </button>
+        -->
     </div>
 
 </div>
