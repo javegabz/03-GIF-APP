@@ -10,7 +10,8 @@ export class SidebarComponent {
   
   constructor(
               private gifsService : GifsService
-            ) {}
+            ) {
+            }
   
   public tags2: string[] = [];
   
@@ -21,6 +22,11 @@ export class SidebarComponent {
   get tags() {
     return this.gifsService.tagsHistory;
   }
+
+  searchTag ( newTag : string  ) {
+    this.gifsService.searchTag(newTag);
+    //this.tagInput.nativeElement.value = "";
+}
 
 
 }
